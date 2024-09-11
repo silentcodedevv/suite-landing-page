@@ -1,0 +1,750 @@
+/* CSS VARIABLES */
+:root {
+  /* 01 COLORS */
+  --Dark-Blue: #172339;
+  --Grey: #49566d;
+  --Cream: #f3ede7;
+  --Cream-White: #faf8f6;
+  --Custom-Purple: #a060ff;
+  --Custom-Pink: #cb30e3;
+  --Custom-Gold: #ffa84e;
+
+  /* 02 TYPOGRAPHY */
+  --Epilogue: "Epilogue", sans-serif;
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Background color for body */
+
+body {
+  background-color: var(--Cream);
+  font-family: var(--Epilogue);
+}
+
+/* Header */
+
+.header {
+  max-width: 100%;
+  height: 48px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+}
+
+.logo {
+  height: 32px;
+}
+
+.transparent-beta-btn {
+  background-color: transparent;
+  border: 1px solid var(--Dark-Blue);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.transparent-beta-btn:hover {
+  background-color: var(--Dark-Blue);
+  color: var(--Cream-White);
+}
+
+/* Main content - text */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.epilogue-bold {
+  font-weight: bold;
+}
+
+.hero-content {
+  position: relative;
+}
+
+.curved-line1 {
+  position: absolute;
+  left: 180px;
+  top: -20px;
+  height: 19px;
+  width: 151px;
+}
+
+.text-sec > h1 {
+  font-size: 2.375rem;
+  color: var(--Dark-Blue);
+  font-weight: 500;
+  max-width: 343px;
+}
+
+.text-sec > p {
+  color: var(--Grey);
+  line-height: 28px;
+  max-width: 343px;
+  padding: 2rem 0rem;
+}
+
+.beta-btn {
+  background-color: var(--Dark-Blue);
+  color: var(--Cream-White);
+  padding: 0.938rem 1.969rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.beta-btn:hover {
+  background: linear-gradient(
+    130deg,
+    var(--Custom-Purple),
+    var(--Custom-Pink),
+    var(--Custom-Gold)
+  );
+}
+
+/* Hero image */
+
+.hero-landscape {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 343px;
+  padding: 3.438rem 0rem;
+  border-radius: 15px;
+}
+
+/* Stats */
+
+.stats > li {
+  display: flex;
+  align-items: center;
+}
+
+.stats > li:nth-child(2) {
+  padding: 2rem 0rem;
+}
+
+.number {
+  font-size: 3rem;
+  color: var(--Dark-Blue);
+}
+
+.type {
+  color: var(--Grey);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+/* It just works box */
+
+.works-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Dark-Blue);
+  width: 100%;
+  height: 788px;
+  border-radius: 15px;
+  margin-top: 15rem;
+  z-index: -1;
+}
+
+.jeremy-wrapper {
+  top: -180px;
+}
+
+.jeremy2 {
+  display: none;
+}
+
+.jeremy {
+  width: 252px;
+}
+
+.blur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  position: absolute;
+}
+
+.curved-line2 {
+  width: 49.27px;
+  height: 40px;
+}
+
+.work-box-text > h2 {
+  font-size: 2.5rem;
+  color: var(--Cream-White);
+  font-weight: 500;
+  padding-top: 2.313rem;
+  padding-bottom: 2.5rem;
+}
+
+.work-box-text > p {
+  text-align: center;
+  color: var(--Cream);
+  font-size: 1.125rem;
+  line-height: 32px;
+  width: 343px;
+  letter-spacing: 0.09px;
+}
+
+.JR {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.18px;
+  line-height: 32px;
+  font-size: 1.125rem;
+  color: var(--Cream-White);
+}
+
+.undertext {
+  color: var(--Cream);
+  line-height: 26px;
+  letter-spacing: 2.5px;
+  font-weight: 300;
+}
+
+.work-box-text {
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+footer > icon {
+  width: 20px;
+  height: 20px;
+}
+
+footer > div {
+  display: flex;
+  gap: 28px;
+}
+
+/* MOBILE VIEW */
+
+@media screen and (max-width: 768px) {
+  /* Header */
+
+  .header {
+    height: 48px;
+    padding: 0rem 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .header-content {
+    height: 48px;
+  }
+
+  .transparent-beta-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Main content - text */
+
+  .curved-line1 {
+    left: 160px;
+  }
+
+  .text-sec > h1 {
+    font-size: 2.375rem;
+    max-width: 343px;
+  }
+
+  .text-sec > p {
+    line-height: 28px;
+    max-width: 343px;
+    padding: 2rem 0rem;
+  }
+
+  .beta-btn {
+    padding: 0.938rem 1.969rem;
+    border-radius: 6px;
+    font-size: 1.125rem;
+  }
+}
+
+/* Hero image */
+
+.hero-landscape {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 343px;
+  padding: 3.438rem 0rem;
+  border-radius: 15px;
+}
+
+.image-hero-portrait {
+  display: none;
+}
+
+/* Stats */
+
+.stats > li {
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats > li:nth-child(2) {
+  padding: 2rem 0rem;
+}
+
+/* It just works box */
+
+.works-box {
+  width: 100%;
+  height: 788px;
+  margin-top: 15rem;
+}
+
+.blur {
+  top: -140px;
+  width: 343px;
+  height: 402px;
+}
+
+.jeremy-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.curved-line2 {
+  margin-top: 2rem;
+  width: 49.27px;
+  height: 40px;
+}
+
+.h3-text {
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+footer > icon {
+  width: 20px;
+  height: 20px;
+}
+
+footer > div {
+  display: flex;
+  gap: 28px;
+}
+
+/* TABLET VIEW */
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  /* Main content - text */
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .hero-text-sec {
+    margin-right: -9.5rem;
+    z-index: 1;
+    width: 533px;
+  }
+
+  .curved-line1 {
+    left: 235px;
+    top: 50px;
+    height: 29px;
+    width: 231.19px;
+  }
+
+  .text-sec > h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    max-width: 573px;
+  }
+
+  /* Hero image */
+
+  .image-hero-portrait {
+    display: block;
+    max-width: 281px;
+    object-fit: cover;
+    height: 482px;
+    border-radius: 15px;
+  }
+
+  .hero-landscape {
+    display: none;
+  }
+
+  /* Stats */
+
+  .stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding-top: 5.5rem;
+    grid-column: 1 / span 2;
+  }
+
+  .stats > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 223px;
+  }
+
+  .number {
+    font-size: 3rem;
+    color: var(--Dark-Blue);
+  }
+
+  .type {
+    color: var(--Grey);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+
+  /* It just works box */
+
+  .works-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Dark-Blue);
+    width: 100%;
+    height: 748px;
+    border-radius: 15px;
+    margin-top: 18rem;
+    z-index: -1;
+  }
+
+  .jeremy-wrapper {
+    top: -180px;
+    position: absolute;
+  }
+
+  .jeremy2 {
+    display: none;
+  }
+
+  .jeremy {
+    width: 252px;
+  }
+
+  .blur {
+    top: 100px;
+    width: 343px;
+    height: 402px;
+  }
+
+  .curved-line2 {
+    margin-top: 16rem;
+    width: 49.27px;
+    height: 40px;
+  }
+
+  .work-box-text > h2 {
+    font-size: 2.5rem;
+    color: var(--Cream-White);
+    font-weight: 500;
+    padding-top: 2.313rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .work-box-text > p {
+    text-align: center;
+    color: var(--Cream);
+    font-size: 1.125rem;
+    line-height: 32px;
+    width: 343px;
+    letter-spacing: 0.09px;
+  }
+
+  .JR {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.18px;
+    line-height: 32px;
+    font-size: 1.125rem;
+    color: var(--Cream-White);
+  }
+
+  .undertext {
+    color: var(--Cream);
+    line-height: 26px;
+    letter-spacing: 2.5px;
+    font-weight: 300;
+  }
+
+  .h3-text {
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  /* FOOTER */
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0rem 2.438rem;
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+  }
+
+  footer > icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  footer > div {
+    display: flex;
+    gap: 28px;
+  }
+}
+
+/* DESKTOP VIEW */
+
+@media screen and (min-width: 1440px) {
+  /* Main content - text */
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: start;
+  }
+  .hero-text-sec {
+    margin-right: -11.5rem;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    width: 533px;
+  }
+  .curved-line1 {
+    left: 235px;
+    top: 110px;
+    height: 29px;
+    width: 231.19px;
+  }
+
+  .text-sec > h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    max-width: 573px;
+  }
+
+  /* Hero image */
+
+  .image-hero-portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    object-fit: cover;
+    height: 600px;
+    border-radius: 15px;
+    margin-left: 2.75rem;
+  }
+
+  .hero-landscape {
+    display: none;
+  }
+
+  /* Stats */
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding-left: 12rem;
+  }
+
+  .stats > li:nth-child(2) {
+    padding: 3.938rem 0rem;
+  }
+
+  .number {
+    font-size: 3rem;
+    color: var(--Dark-Blue);
+  }
+
+  .type {
+    color: var(--Grey);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+
+  /* It just works box */
+
+  .works-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--Dark-Blue);
+    width: 1109px;
+    height: 545px;
+    border-radius: 15px;
+    margin-top: 18rem;
+    z-index: -1;
+  }
+
+  .jeremy2 {
+    display: block;
+    position: absolute;
+    top: -45px;
+    width: 359.81px;
+    height: 589.56px;
+  }
+
+  .jeremy {
+    display: none;
+  }
+
+  .blur {
+    position: absolute;
+    padding-top: 30rem;
+    z-index: -1;
+    width: 394px;
+    height: 394px;
+  }
+
+  .curved-line2 {
+    margin: auto;
+    width: 64.05px;
+    height: 52px;
+  }
+
+  .work-box-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .work-box-text > h2 {
+    font-size: 2.5rem;
+    color: var(--Cream-White);
+    font-weight: 500;
+    padding-top: 2.313rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .work-box-text > p {
+    text-align: center;
+    color: var(--Cream);
+    font-size: 1.125rem;
+    line-height: 32px;
+    width: 343px;
+    letter-spacing: 0.09px;
+  }
+
+  .JR {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.18px;
+    line-height: 32px;
+    font-size: 1.125rem;
+    color: var(--Cream-White);
+  }
+
+  .undertext {
+    color: var(--Cream);
+    line-height: 26px;
+    letter-spacing: 2.5px;
+    font-weight: 300;
+  }
+
+  .h3-text {
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  /* FOOTER */
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0rem 2.438rem;
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+  }
+
+  footer > icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  footer > div {
+    display: flex;
+    gap: 28px;
+  }
+}
